@@ -1,7 +1,8 @@
 function updateH1() {
-  if (document.querySelector("h1").innerHTML === "Hello Friends!") {
-    document.querySelector("h1").innerHTML = "Goodbye";
+  const heading = document.querySelector("h1").innerHTML;
+  if (heading === "Hello Friends!") {
+    heading = "Goodbye";
   } else {
-    document.querySelector("h1").innerHTML = "Hello Friends!";
+    heading = "Hello Friends!";
   }
 }
