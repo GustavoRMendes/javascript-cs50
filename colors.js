@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("#blue").onclick = function () {
-    document.querySelector("#subtitle").style.color = "blue";
-  };
-  document.querySelector("#crimson").onclick = function () {
-    document.querySelector("#subtitle").style.color = "crimson";
-  };
-  document.querySelector("#green").onclick = function () {
-    document.querySelector("#subtitle").style.color = "green";
-  };
+  document.querySelectorAll("button").forEach(function (button) {
+    button.onclick = function () {
+      document.querySelector("#subtitle").style.color = button.dataset.color;
+    };
+  });
 });
